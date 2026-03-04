@@ -1,4 +1,4 @@
-In this challenge, we are learnign about file descriptors in order to obtain the flag.
+In the fd challenge, we are learnign about file descriptors in order to obtain the flag.
 
 What are file descriptors? File descriptors are non-negative integers that interact with I/O. 
 
