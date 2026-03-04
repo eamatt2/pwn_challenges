@@ -11,7 +11,7 @@ if(argc<2){
         }
 ```
 
-This code segment is looking at the arguments that are passed in when the program is run. We need to pass in at msot one integer. We cannot pass in anything other than an integer.
+This code segment is looking at the arguments that are passed in when the program is run. We need to pass in at most one integer. We cannot pass in anything other than an integer.
 
 ```
 int fd = atoi( argv[1] ) - 0x1234;
