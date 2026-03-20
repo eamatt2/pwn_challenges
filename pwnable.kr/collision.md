@@ -39,4 +39,12 @@ unsigned long check_password(const char* p){
 }
 ```
 
-In this function, we are 
+In this function, we are establishing an int array that contains our input. It then iterates through the array and checks 5 indexes, adding each index into our result. For example if our input was "00112233445566778899" the four indices would be like this:
+```
+ip[0] = 0011
+ip[1] = 2233
+ip[2] = 4455
+ip[3] = 6677
+ip[4] = 8899
+```
+
