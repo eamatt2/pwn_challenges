@@ -80,6 +80,7 @@ Now that we have the offset, we can overwrite correct to equal 0xdeadbeef.
 We will use the function p32() in order to pack a 32-bit integer into a little-endian byte string. Since it is in little endian, that means our least significant byte is stored first
 ```
 Ex: p32(0xdeadbeef) => b'\xef\xbe\xad\xde
+```
 
 Using this function, we can convert deadbeef into a bit string that we will then use to overwrite correct
 ```
