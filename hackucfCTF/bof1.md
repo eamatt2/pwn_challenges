@@ -1,4 +1,4 @@
-**This is a writeup for the bof0 challenge**
+**This is a writeup for the bof1 challenge**
 
 ```
 int main(void) {
@@ -21,6 +21,8 @@ int main(void) {
 Above is the main function that our program will be running. We can see that we have initialize and admin variable to 0 and a char buffer of size 32.
 
 Our attack point is the scanf that is taking a string input that does not have proper input handling. We will be able to write past the allocated space for buf and into the space for admin.
+
+**Exploit method**
 
 If we load the binary into ghidra, we can look at the assembly that makes up our program,
 
