@@ -1,4 +1,4 @@
-**This is a writeup for the bof2 challenge**
+**This is a writeup for the bof3 challenge**
 
 This is the main function that our program runs
 ```
