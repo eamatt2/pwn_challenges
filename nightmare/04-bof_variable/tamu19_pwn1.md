@@ -89,8 +89,6 @@ payload3 = b"A" * 43 + p32(0xDEA110C8)
 
 **Final Exploit**
 ```
-**Final Exploit**
-```
 from pwn import *
 
 BINARY="./pwn1"

@@ -30,7 +30,7 @@ void func(void)
 
 In this function we see that we have our buffer that is initialized with 64 bytes of memory. We then see that we have a value int initialized to equal 0. Then we see that we are taking user input tand storing that in our buf array. Afterwards we have an if statement that checks if value == -0x21524111 (deadbeef).
 
-No the key takeaway of these two functions is that our win function is never called. So how do we get the flag if that function isn't called? Well we need to overwrite the return address so that when we hit it, it will "jump" to the win function.
+Now the key takeaway of these two functions is that our win function is never called. So how do we get the flag if that function isn't called? Well we need to overwrite the return address so that when we hit it, it will "jump" to the win function.
 
 So our main attack path for this challenge is to overwrite the buffer, overwrite our value function, and then overwrite our return address.
 
@@ -42,7 +42,7 @@ Stack[-0x10]:4 value
 Stack[-0x50]:1 buf
 ```
 
-So our the first thing we need to do is find the offset between buf amnd value
+So our the first thing we need to do is find the offset between buf and value
 ```
 0x50 - 0x10 = 0x40
 0x40 => 16 x 4 = 64
@@ -58,11 +58,11 @@ Our next step is to overwrite value so that it is equal to deadbeef. To do so, w
 payload += p32(0xdeadbeef)
 ```
 
-So if you call back to the stack layout, we currently at 0x10. THe offset between 0x10 and the next part of the stack is
+So if you call back to the stack layout, we're currently at 0x10. The offset between 0x10 and the next part of the stack is
 ```
 0x10 -0x8 = 16 - 8 = 8 bytes
 ```
-So we see that there is an 8byte difference, but deadbeef is only 4 bytes meaning that before we can even reach 0x8 we need to pack an additional 8 bytes. We will add this in our next part of our payload
+So we see that there is an 8 byte difference, but deadbeef is only 4 bytes meaning that before we can even reach 0x8 we need to pack an additional 8 bytes. We will add this in our next part of our payload
 
 Now that we have the correct value, we need to get to the return address. 
 
