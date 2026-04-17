@@ -1,6 +1,4 @@
-**This is a writeup for the stack0 part1 challenge**
-
-**This is a writeup for the stack0 part1 challenge**
+**This is a writeup for the stack0 part2 challenge**
 
 Below is the main function that our prorgam will run
 ```
